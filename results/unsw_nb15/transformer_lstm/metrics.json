@@ -1,0 +1,19 @@
+{
+    "dataset_name": "unsw_nb15",
+    "model_type": "transformer_lstm",
+    "accuracy": 0.9361481941426059,
+    "precision": 0.9545343037043095,
+    "recall": 0.9451056594607724,
+    "f1_score": 0.9497965825874695,
+    "confusion_matrix": [
+        [
+            12838,
+            1112
+        ],
+        [
+            1356,
+            23346
+        ]
+    ],
+    "roc_auc": 0.9879225123326685
+}

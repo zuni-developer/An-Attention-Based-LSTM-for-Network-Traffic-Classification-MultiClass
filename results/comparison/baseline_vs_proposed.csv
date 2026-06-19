@@ -1,0 +1,5 @@
+Dataset,Model,Accuracy,Precision,Recall,F1-Score,ROC-AUC
+cicdarknet2020,transformer_lstm,0.9605,0.9606,0.9605,0.9604,
+cicdarknet2020,baseline_lstm,0.9571,0.957,0.9571,0.957,
+unsw_nb15,transformer_lstm,0.9361,0.9545,0.9451,0.9498,0.9879
+unsw_nb15,baseline_lstm,0.934,0.9494,0.9472,0.9483,0.9873

@@ -1,0 +1,18 @@
+=== Evaluation Report: cicdarknet2020 (transformer_lstm) ===
+
+Accuracy  : 0.9605
+Precision : 0.9606
+Recall    : 0.9605
+F1-Score  : 0.9604
+
+              precision    recall  f1-score   support
+
+     Non-Tor       1.00      1.00      1.00      9721
+      NonVPN       0.89      0.92      0.91      3033
+         Tor       0.96      0.84      0.89       177
+         VPN       0.91      0.88      0.89      2538
+
+    accuracy                           0.96     15469
+   macro avg       0.94      0.91      0.92     15469
+weighted avg       0.96      0.96      0.96     15469
+

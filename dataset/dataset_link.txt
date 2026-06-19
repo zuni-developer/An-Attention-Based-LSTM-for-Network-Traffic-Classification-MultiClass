@@ -1,0 +1,38 @@
+This project already ships two real, public datasets (used directly by
+train.py / evaluate.py / the notebook — no extra download needed):
+
+Dataset 1: CIC-Darknet2020
+  File in this repo : dataset/cicdarknet2020.parquet
+  Kaggle URL         : https://www.kaggle.com/datasets/dhoogla/cicdarknet2020
+  Target column      : "Label" (Tor / Non-Tor / VPN / Non-VPN style classes)
+
+Dataset 2: UNSW-NB15
+  File in this repo : dataset/unsw_nb15.csv
+  Kaggle URL         : search "UNSW-NB15" on Kaggle (multiple equivalent
+                        mirrors exist, e.g. mrwellsdavid/unsw-nb15) — verify
+                        the exact listing your file came from before citing
+                        it in the report.
+  Target column      : "label" (0 = normal, 1 = attack); "attack_cat" holds the
+                        multi-class attack category and is excluded from the
+                        feature set automatically by preprocessing.py to avoid
+                        leaking the target.
+
+If you want to re-download these yourself, or swap in a different dataset
+from the assignment's suggested list, use the Kaggle CLI:
+
+  pip install kaggle
+  # place your kaggle.json API token in ~/.kaggle/kaggle.json
+  kaggle datasets download -d dhoogla/cicdarknet2020 -p dataset/ --unzip
+  kaggle datasets download -d mrwellsdavid/unsw-nb15 -p dataset/ --unzip
+
+Other datasets suggested in the project brief (any two may be used):
+  - https://www.kaggle.com/datasets/ravikumargattu/network-traffic-dataset?select=Midterm_53_group.csv
+  - https://www.kaggle.com/datasets/dhoogla/cicdarknet2020
+  - https://www.kaggle.com/datasets/crawford/computer-network-traffic
+  - https://www.kaggle.com/datasets/nameera06/network-traffic
+
+If you swap in a new file, update DATASET_PATH and DATASET_NAME in
+train.py's CLI args (or the notebook's config cell) accordingly. The target
+column is auto-detected from common names (Label, label, Class, Category,
+Attack, Target); if your file uses a different name, add it to
+_TARGET_CANDIDATES in src/preprocessing.py.

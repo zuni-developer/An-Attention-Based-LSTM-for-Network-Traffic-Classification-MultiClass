@@ -1,0 +1,17 @@
+=== Evaluation Report: unsw_nb15 (transformer_lstm) ===
+
+Accuracy  : 0.9361
+Precision : 0.9545
+Recall    : 0.9451
+F1-Score  : 0.9498
+ROC-AUC   : 0.9879
+
+              precision    recall  f1-score   support
+
+           0       0.90      0.92      0.91     13950
+           1       0.95      0.95      0.95     24702
+
+    accuracy                           0.94     38652
+   macro avg       0.93      0.93      0.93     38652
+weighted avg       0.94      0.94      0.94     38652
+
