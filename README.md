@@ -191,9 +191,9 @@ learning curves -> comparison.
 
 | Name | Roll No | Contribution |
 |------|---------|---------------|
-| _Member 1_ | _____ | Preprocessing, GitHub repo |
-| _Member 2_ | _____ | Model design & training |
-| _Member 3_ | _____ | Evaluation, report writing |
+| Nazinda | 63810 | Code, GitHub repo |
+| Zunaira Sabir | 62717 | Report writing, PPT making |
+| Aazain Jan | 63219 | Report writing, Presentation |
 
 ---
 
