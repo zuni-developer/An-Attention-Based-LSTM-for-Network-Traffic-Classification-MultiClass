@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this code or build on this work, please cite it as below."
+type: software
+title: "An Attention-Based LSTM Model for Intelligent Network Traffic Classification"
+authors:
+  - family-names: "Nazinda"
+    affiliation: "Department of Software Engineering, BUITEMS, Quetta, Pakistan"
+    email: "nazinda810@gmail.com"
+  - family-names: "Sabir"
+    given-names: "Zunaira"
+    affiliation: "Department of Software Engineering, BUITEMS, Quetta, Pakistan"
+    email: "zunairasabir7@gmail.com"
+  - family-names: "Jan"
+    given-names: "Aazain"
+    affiliation: "Department of Software Engineering, BUITEMS, BUITEMS, Quetta, Pakistan"
+    email: "aazainjan24@gmail.com"
+repository-code: "https://github.com/zuni-developer/An-Attention-Based-LSTM-Model-for-Intelligent-Network-Traffic-Classification"
+abstract: >
+  A hybrid deep learning architecture combining LSTM networks with
+  Transformer-based Multi-Head Self-Attention for network traffic classification.
+  Evaluated on CIC-Darknet2020 (96.05% accuracy, four-class) and UNSW-NB15
+  (93.61% accuracy, ROC-AUC 0.9879, binary), outperforming a plain LSTM baseline.
+keywords:
+  - network traffic classification
+  - LSTM
+  - transformer
+  - self-attention
+  - intrusion detection
+  - deep learning
+  - CIC-Darknet2020
+  - UNSW-NB15
+year: 2025
