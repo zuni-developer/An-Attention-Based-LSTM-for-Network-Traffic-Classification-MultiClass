@@ -263,7 +263,7 @@ Edit the config cell at the top and run all cells for an interactive walkthrough
 If you use this code or build on this work, please cite:
 
 ```bibtex
-@article{nazinda2025attentionlstm,
+@article{nazinda2026attentionlstm,
   title     = {An Attention-Based LSTM Model for Intelligent Network Traffic Classification},
   author    = {Nazinda, Zunaira Sabir, and Aazain Jan},
   year      = {2026},
