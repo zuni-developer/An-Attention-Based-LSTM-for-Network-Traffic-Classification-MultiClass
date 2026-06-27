@@ -265,8 +265,8 @@ If you use this code or build on this work, please cite:
 ```bibtex
 @article{nazinda2025attentionlstm,
   title     = {An Attention-Based LSTM Model for Intelligent Network Traffic Classification},
-  author    = {Nazinda and Sabir, Zunaira and Jan, Aazain},
-  year      = {2025},
+  author    = {Nazinda, Zunaira Sabir, and Aazain Jan},
+  year      = {2026},
   institution = {Department of Software Engineering, BUITEMS, Quetta, Pakistan},
   url       = {https://github.com/zuni-developer/An-Attention-Based-LSTM-Model-for-Intelligent-Network-Traffic-Classification}
 }
