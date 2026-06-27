@@ -1,9 +1,12 @@
-cff-version: 1.2.0
+cff-version: 1.0.0
 message: "If you use this code or build on this work, please cite it as below."
 type: software
 title: "An Attention-Based LSTM Model for Intelligent Network Traffic Classification"
+version: 1.0.0
+date-released: 2026
 authors:
-  - family-names: "Nazinda"
+  - family-names: ""
+    given-names: "Nazinda"
     affiliation: "Department of Software Engineering, BUITEMS, Quetta, Pakistan"
     email: "nazinda810@gmail.com"
   - family-names: "Sabir"
@@ -12,7 +15,7 @@ authors:
     email: "zunairasabir7@gmail.com"
   - family-names: "Jan"
     given-names: "Aazain"
-    affiliation: "Department of Software Engineering, BUITEMS, BUITEMS, Quetta, Pakistan"
+    affiliation: "Department of Software Engineering, BUITEMS, Quetta, Pakistan"
     email: "aazainjan24@gmail.com"
 repository-code: "https://github.com/zuni-developer/An-Attention-Based-LSTM-Model-for-Intelligent-Network-Traffic-Classification"
 abstract: >
@@ -29,4 +32,3 @@ keywords:
   - deep learning
   - CIC-Darknet2020
   - UNSW-NB15
-year: 2025
