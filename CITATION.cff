@@ -5,8 +5,7 @@ title: "An Attention-Based LSTM Model for Intelligent Network Traffic Classifica
 version: 1.0.0
 date-released: 2026
 authors:
-  - family-names: ""
-    given-names: "Nazinda"
+  - given-names: "Nazinda"
     affiliation: "Department of Software Engineering, BUITEMS, Quetta, Pakistan"
     email: "nazinda810@gmail.com"
   - family-names: "Sabir"
