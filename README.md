@@ -232,9 +232,9 @@ Edit the config cell at the top and run all cells for an interactive walkthrough
 
 ## Team
 
-Zunaira Sabir (62717) 
-Nazinda (63810)
-Aazain Jan (63219) 
+* Zunaira Sabir (62717) 
+* Nazinda (63810)
+* Aazain Jan (63219) 
 
 ---
 
@@ -251,14 +251,3 @@ If you use this code or build on this work, please cite:
   url       = {https://github.com/zuni-developer/An-Attention-Based-LSTM-Model-for-Intelligent-Network-Traffic-Classification}
 }
 ```
-
----
-
-## References
-
-1. A. Azab et al., "Network traffic classification: Techniques, datasets, and challenges," *Digital Communications and Networks*, vol. 10, pp. 676–692, 2024.
-2. F. Pacheco et al., "Towards the deployment of machine learning solutions in network traffic classification: A systematic survey," *IEEE Communications Surveys & Tutorials*, vol. 21, no. 2, pp. 1988–2014, 2019.
-3. J. Zhang et al., "Robust network traffic classification," *IEEE/ACM Transactions on Networking*, vol. 23, no. 4, pp. 1257–1270, 2015.
-4. N. Mandela et al., "Efficient dark web traffic classification using a hybrid CNN-LSTM model," *International Journal of Information Technology*, 2025.
-5. A. H. Lashkari et al., "CIC-Darknet2020 dataset," University of New Brunswick, 2020.
-6. N. Moustafa and J. Slay, "UNSW-NB15: A comprehensive data set for network intrusion detection systems," *MilCIS*, 2015.
