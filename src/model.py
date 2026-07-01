@@ -129,90 +129,6 @@ def build_model(
     return model
 
 
-# def build_baseline_model(
-#     timesteps: int,
-#     num_features: int,
-#     num_classes: int,
-#     is_binary: bool,
-#     lstm_units: int = 64,
-#     dense_units: int = 64,
-#     dropout_rate: float = 0.3,
-#     learning_rate: float = 1e-3,
-# ) -> Model:
-#     """
-#     Build and compile a simple baseline model: a plain stacked-LSTM with
-#     NO attention mechanism. Used to demonstrate the improvement gained by
-#     adding the Transformer (Multi-Head Attention) block in `build_model`,
-#     as required by the project's evaluation objectives.
-
-#     Architecture:
-#         Input(shape=(timesteps, features))
-#         -> LSTM(64, return_sequences=True)
-#         -> LSTM(64)
-#         -> Dense(64, relu)
-#         -> Dropout(0.3)
-#         -> Output Dense (sigmoid for binary, softmax for multi-class)
-#     """
-#     inputs = Input(shape=(timesteps, num_features), name="input")
-
-#     x = LSTM(lstm_units, return_sequences=True, name="lstm_1")(inputs)
-#     x = LSTM(lstm_units, name="lstm_2")(x)
-#     x = Dense(dense_units, activation="relu", name="dense_1")(x)
-#     x = Dropout(dropout_rate, name="dropout_1")(x)
-
-#     if is_binary:
-#         outputs = Dense(1, activation="sigmoid", name="output")(x)
-#         loss = "binary_crossentropy"
-#     else:
-#         outputs = Dense(num_classes, activation="softmax", name="output")(x)
-#         loss = "sparse_categorical_crossentropy"
-
-#     model = Model(inputs=inputs, outputs=outputs, name="BaselineLSTM")
-
-#     model.compile(
-#         optimizer=Adam(learning_rate=learning_rate),
-#         loss=loss,
-#         metrics=["accuracy"],
-#     )
-
-#     logger.info("Baseline model built successfully.")
-#     model.summary(print_fn=logger.info)
-
-#     return model
-def build_baseline_model(
-    timesteps: int,
-    num_features: int,
-    num_classes: int,
-    is_binary: bool,
-    lstm_units: int = 64,
-    dropout_rate: float = 0.3,
-    learning_rate: float = 1e-3,
-) -> Model:
-
-    inputs = Input(shape=(timesteps, num_features), name="input")
-
-    x = LSTM(lstm_units, name="lstm")(inputs)
-    x = Dropout(dropout_rate, name="dropout")(x)
-
-    if is_binary:
-        outputs = Dense(1, activation="sigmoid", name="output")(x)
-        loss = "binary_crossentropy"
-    else:
-        outputs = Dense(num_classes, activation="softmax", name="output")(x)
-        loss = "sparse_categorical_crossentropy"
-
-    model = Model(inputs=inputs, outputs=outputs, name="SimpleLSTM")
-
-    model.compile(
-        optimizer=Adam(learning_rate=learning_rate),
-        loss=loss,
-        metrics=["accuracy"],
-    )
-
-    logger.info("Simple LSTM baseline built successfully.")
-    model.summary(print_fn=logger.info)
-
-    return model
 
 def build_model_by_type(
     model_type: str,
@@ -234,14 +150,14 @@ def build_model_by_type(
             is_binary=is_binary,
             learning_rate=learning_rate,
         )
-    elif model_type == "baseline_lstm":
-        return build_baseline_model(
-            timesteps=timesteps,
-            num_features=num_features,
-            num_classes=num_classes,
-            is_binary=is_binary,
-            learning_rate=learning_rate,
-        )
+    # elif model_type == "baseline_lstm":
+    #     return build_baseline_model(
+    #         timesteps=timesteps,
+    #         num_features=num_features,
+    #         num_classes=num_classes,
+    #         is_binary=is_binary,
+    #         learning_rate=learning_rate,
+    #     )
     else:
         raise ValueError(
             f"Unknown model_type '{model_type}'. Expected 'transformer_lstm' or 'baseline_lstm'."
