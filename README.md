@@ -59,17 +59,16 @@ Input (samples, timesteps=1, features)
 | Dataset | Model | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
 |---------|-------|----------|-----------|--------|----------|---------|
 | CIC-Darknet2020 | **Transformer-LSTM (Proposed)** | **96.05%** | **96.06%** | **96.05%** | **96.04%** | — |
-| CIC-Darknet2020 | Baseline-LSTM | 95.71% | 95.70% | 95.71% | 95.70% | — |
-| UNSW-NB15 | **Transformer-LSTM (Proposed)** | **93.61%** | **95.45%** | **94.51%** | **94.98%** | **0.9879** |
-| UNSW-NB15 | Baseline-LSTM | 93.40% | 94.94% | 94.72% | 94.83% | 0.9873 |
+| CIC-Darknet2020 | Logistic-Regression | 94.19% | 93.29% | 95.63% | 94.44% | 94.15% |
+| CIC-Darknet2020 | SVM | 95.81% | 96.23% | 95.63% | 95.92% | 95.81% |
+| CIC-Darknet2020 | CNN | 95.81% | 95.65% | 96.25% | 95.95% | 98.24% |
+| CIC-Darknet2020 | LSTM | 91.29% | 88.00% | 96.25% | 91.94% | 96.04% |
+
 
 ### Performance Comparison — CIC-Darknet2020
 
 ![Baseline vs Proposed on CIC-Darknet2020](figures/comparison/baseline_vs_proposed_cicdarknet2020.png)
 
-### Performance Comparison — UNSW-NB15
-
-![Baseline vs Proposed on UNSW-NB15](figures/comparison/baseline_vs_proposed_unsw_nb15.png)
 
 ### Confusion Matrix — Transformer-LSTM on CIC-Darknet2020
 
