@@ -1,7 +1,7 @@
 # An Attention-Based LSTM Model for Intelligent Network Traffic Classification
 
 > **Transformer-Enhanced LSTM for network traffic classification**  
-> Built with TensorFlow/Keras · Evaluated on CIC-Darknet2020 and UNSW-NB15 · Benchmarked against a plain-LSTM baseline
+> Built with TensorFlow/Keras · Evaluated on CIC-Darknet2020 and UNSW-NB15 · Benchmarked against traditional models
 
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![TensorFlow 2.15+](https://img.shields.io/badge/TensorFlow-2.15%2B-orange.svg)](https://www.tensorflow.org/)
@@ -23,7 +23,7 @@ Department of Software Engineering, BUITEMS, Quetta, Pakistan
 
 This repository contains the complete implementation for our paper on hybrid deep learning for network traffic classification. We propose a **Transformer-Enhanced LSTM** architecture that applies multi-head self-attention on top of LSTM outputs, enabling the model to focus on critical temporal patterns in network flow statistics.
 
-The model is evaluated on two public benchmark datasets and compared against a plain-LSTM baseline across all standard metrics.
+The model is evaluated on two public benchmark datasets and compared the CICDARKNET2020 dataset against traditional models across all standard metrics.
 
 ---
 
@@ -40,16 +40,6 @@ Input (samples, timesteps=1, features)
   → Dropout(0.3) → Dense(128, ReLU) → Dropout(0.3)
   → Output: Dense(1, sigmoid) [binary] | Dense(N, softmax) [multi-class]
 ```
-
-**Baseline model — plain LSTM** (`model_type=baseline_lstm`):
-
-```
-Input (samples, timesteps=1, features)
-  → LSTM(64, return_sequences=True) → LSTM(64)
-  → Dense(64, ReLU) → Dropout(0.3)
-  → Output: Dense(1, sigmoid) [binary] | Dense(N, softmax) [multi-class]
-```
-
 ---
 
 ## Results
@@ -165,10 +155,6 @@ bash run_all.sh
 # Proposed model
 python src/train.py --dataset_path dataset/cicdarknet2020.parquet --dataset_name cicdarknet2020 --model_type transformer_lstm
 python src/train.py --dataset_path dataset/unsw_nb15.csv           --dataset_name unsw_nb15      --model_type transformer_lstm
-
-# Baseline
-python src/train.py --dataset_path dataset/cicdarknet2020.parquet --dataset_name cicdarknet2020 --model_type baseline_lstm
-python src/train.py --dataset_path dataset/unsw_nb15.csv           --dataset_name unsw_nb15      --model_type baseline_lstm
 ```
 
 Optional flags: `--epochs 50 --batch_size 64 --lr 0.001`
@@ -177,9 +163,7 @@ Optional flags: `--epochs 50 --batch_size 64 --lr 0.001`
 
 ```bash
 python src/evaluate.py --dataset_path dataset/cicdarknet2020.parquet --dataset_name cicdarknet2020 --model_type transformer_lstm
-python src/evaluate.py --dataset_path dataset/cicdarknet2020.parquet --dataset_name cicdarknet2020 --model_type baseline_lstm
 python src/evaluate.py --dataset_path dataset/unsw_nb15.csv           --dataset_name unsw_nb15      --model_type transformer_lstm
-python src/evaluate.py --dataset_path dataset/unsw_nb15.csv           --dataset_name unsw_nb15      --model_type baseline_lstm
 ```
 
 Outputs saved to `results/<dataset>/<model>/` and `figures/<dataset>/<model>/`.
@@ -225,7 +209,6 @@ Edit the config cell at the top and run all cells for an interactive walkthrough
 | Batch size | 64 |
 | Learning rate | 1 × 10⁻³ (Adam) |
 | LSTM units (proposed) | 128 |
-| LSTM units (baseline) | 64 |
 | Attention heads | 4 |
 | Key dimension | 32 |
 | Dropout rate | 0.3 |
