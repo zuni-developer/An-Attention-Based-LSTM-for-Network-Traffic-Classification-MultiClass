@@ -15,8 +15,6 @@
 Nazinda, Zunaira Sabir, Aazain Jan  
 Department of Software Engineering, BUITEMS, Quetta, Pakistan
 
-> The full paper is available in [`report/`](report/).
-
 ---
 
 ## Overview
@@ -120,8 +118,7 @@ See [`dataset/dataset_link.txt`](dataset/dataset_link.txt) for original source l
 │       ├── label_encoder.joblib
 │       ├── feature_encoders.joblib
 │       └── <model>/best_model.keras
-└── report/
-    └── final_report.pdf
+└
 ```
 
 ---
