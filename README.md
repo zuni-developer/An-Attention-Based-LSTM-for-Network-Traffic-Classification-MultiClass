@@ -1,4 +1,4 @@
-# An Attention-Based LSTM Model for Intelligent Network Traffic Classification (Binary)
+# An Attention-Based LSTM Model for Intelligent Network Traffic Classification (MultiClass)
 
 > **Transformer-Enhanced LSTM for network traffic classification**  
 > Built with TensorFlow/Keras · Evaluated on CIC-Darknet2020 and UNSW-NB15 · Benchmarked against traditional models
