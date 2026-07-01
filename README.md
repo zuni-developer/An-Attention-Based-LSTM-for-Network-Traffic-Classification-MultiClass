@@ -232,11 +232,9 @@ Edit the config cell at the top and run all cells for an interactive walkthrough
 
 ## Team
 
-| Name | Roll No | Contribution |
-|------|---------|--------------|
-| Nazinda | 63810 | Code, GitHub repository |
-| Zunaira Sabir | 62717 | Report writing, presentation slides |
-| Aazain Jan | 63219 | Report writing, presentation |
+Zunaira Sabir (62717) 
+Nazinda (63810)
+Aazain Jan (63219) 
 
 ---
 
